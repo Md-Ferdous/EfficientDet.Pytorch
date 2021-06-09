@@ -75,6 +75,7 @@ class CocoDataset(Dataset):
         path = os.path.join(self.root_dir, 'images',
                             self.set_name, image_info['file_name'])
         img = cv2.imread(path)
+        print(path)
 
         if len(img.shape) == 2:
             img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
